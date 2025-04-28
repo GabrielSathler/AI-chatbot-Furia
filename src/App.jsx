@@ -5,6 +5,7 @@ import ChatMessage from "./components/ChatMessage";
 
 const App = () => {
   const [chatHistory, setChatHistory] = useState([]);
+  const [showChatbot, setShowChatbot] = useState([false]);
   const chatBodyRef = useRef();
 
   const generateBotResponse = async (history) => {
@@ -27,7 +28,7 @@ const App = () => {
 
       const response  = await fetch(import.meta.env.VITE_API_URL, requestOpitions);
       const data = await response.json();
-      if(!response.ok) throw new Error(data.error.message || "Alguma coisa deu erradao!");
+      if(!response.ok) throw new Error(data.error.message || "Alguma coisa deu errado!");
 
       //limpa e atualiza o historico do chat com a resposta do bot
       const  apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
@@ -38,18 +39,20 @@ const App = () => {
   };
 
   useEffect(() =>{
-    {/*Scroll automatico para quando o historico atualizar*/}
+    //Scroll automatico para quando o historico atualizar
+
     chatBodyRef.current.scrollTo({top: chatBodyRef.current.scrollHeight, behavior: "smooth"});
   }, [chatHistory]);
 
   return (
-    <div className="container">
-      <button id="chatbot-toggler">
+    <div className={`container ${showChatbot ? "show-chatbot": ""}`}>
+      <button onClick={() => setShowChatbot(prev => !prev)} id="chatbot-toggler">
         <span className="material-symbols-outlined">mode_comment</span>
         <span className="material-symbols-outlined">close</span>
       </button>
 
-      FAZER A LANDING PAGE DEPOIS
+      {/*FAZER A LANDING PAGE DEPOIS*/}
+
       <div className="chatbot-popup">
         {/*HEADER DO CHATBOT*/}
         <div className="chat-header">
