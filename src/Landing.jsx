@@ -1,5 +1,5 @@
 import "./Landing.css";
-import background from "./assets/furiaBackground2.avif";
+import background from "./assets/furiaBackground2.webp";
 
 const Landing = () => {
   return (
