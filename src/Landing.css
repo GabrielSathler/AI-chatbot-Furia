@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  a:hover {
+    color: #ccc;
+  }
+  
+  /* Container da landing */
+  .landing-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background-color: #0a0a0a;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .navbar .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .navbar nav a {
+    margin-left: 2rem;
+    font-size: 1rem;
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 5%;
+    background: #111;
+    overflow: hidden;
+  }
+  
+  .hero-bg {
+    background: center/cover no-repeat;
+    opacity: 0.15;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  
+  .hero-content {
+    z-index: 1;
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
+  /* SECTION PADRÃO */
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 4rem 5%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .section img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 16px;
+  }

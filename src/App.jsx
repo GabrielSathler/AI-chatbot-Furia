@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import Chatboticon from "./components/Chatboticon"
 import ChatForm from "./components/ChatForm"
 import ChatMessage from "./components/ChatMessage";
+import Landing from "./landing";
 
 const App = () => {
   const [chatHistory, setChatHistory] = useState([]);
@@ -45,42 +46,45 @@ const App = () => {
   }, [chatHistory]);
 
   return (
-    <div className={`container ${showChatbot ? "show-chatbot": ""}`}>
-      <button onClick={() => setShowChatbot(prev => !prev)} id="chatbot-toggler">
-        <span className="material-symbols-outlined">mode_comment</span>
-        <span className="material-symbols-outlined">close</span>
-      </button>
+    <div>
+      <Landing/>
+      <div className={`container ${showChatbot ? "show-chatbot": ""}`}>
+        <button onClick={() => setShowChatbot(prev => !prev)} id="chatbot-toggler">
+          <span className="material-symbols-outlined">mode_comment</span>
+          <span className="material-symbols-outlined">close</span>
+        </button>
 
-      {/*FAZER A LANDING PAGE DEPOIS*/}
+        {/*FAZER A LANDING PAGE DEPOIS*/}
 
-      <div className="chatbot-popup">
-        {/*HEADER DO CHATBOT*/}
-        <div className="chat-header">
-          <div className="header-info">
-            <Chatboticon/>
-            <h2 className="logo-text">FuriaAI</h2>
+        <div className="chatbot-popup">
+          {/*HEADER DO CHATBOT*/}
+          <div className="chat-header">
+            <div className="header-info">
+              <Chatboticon/>
+              <h2 className="logo-text">FuriaAI</h2>
+            </div>
+            <button className="material-symbols-outlined">
+              keyboard_arrow_down 
+            </button>
           </div>
-          <button className="material-symbols-outlined">
-            keyboard_arrow_down 
-          </button>
-        </div>
-        {/*CHATBOT BODY*/}
-        <div ref={chatBodyRef} className="chat-body">
-          <div className="message bot-message">
-            <Chatboticon/>
-            <p className="message-text">
-              Olá fã!👋 <br/> sou o Chatbot da Furia! Me pergunte o que quer saber! Sobre a maior ORG de E-Sports do Brasil! 🐼
-            </p>
-          </div>  
-          {/*RENDERIZA O CHAT DO USUARIO*/}
-          {chatHistory.map((chat, index) => (
-            <ChatMessage key={index} chat={chat}/>
-          ))}
-        </div>
+          {/*CHATBOT BODY*/}
+          <div ref={chatBodyRef} className="chat-body">
+            <div className="message bot-message">
+              <Chatboticon/>
+              <p className="message-text">
+                Olá fã!👋 <br/> sou o Chatbot da Furia! Me pergunte o que quer saber! Sobre a maior ORG de E-Sports do Brasil! 🐼
+              </p>
+            </div>  
+            {/*RENDERIZA O CHAT DO USUARIO*/}
+            {chatHistory.map((chat, index) => (
+              <ChatMessage key={index} chat={chat}/>
+            ))}
+          </div>
 
-        {/*FOOTER DO CHATBOT E HISTORICO DE CONVERSA*/}
-        <div className="chat-footer">
-            <ChatForm chatHistory={chatHistory} setChatHistory={setChatHistory} generateBotResponse={generateBotResponse}/>
+          {/*FOOTER DO CHATBOT E HISTORICO DE CONVERSA*/}
+          <div className="chat-footer">
+              <ChatForm chatHistory={chatHistory} setChatHistory={setChatHistory} generateBotResponse={generateBotResponse}/>
+          </div>
         </div>
       </div>
     </div>
