@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import Chatboticon from "./components/Chatboticon"
 import ChatForm from "./components/ChatForm"
 import ChatMessage from "./components/ChatMessage";
-import Landing from "./landing";
+import Landing from "./landing.jsx";
 
 const App = () => {
   const [chatHistory, setChatHistory] = useState([]);
