@@ -1,12 +1,34 @@
-# React + Vite
+# <img src="/src/assets/furia_icon.png" alt="" width="35" height="35"/> FurIA BOT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📝 Descrição
 
-Currently, two official plugins are available:
+O Projeto Furia Chatbot é uma aplicação web que permite aos usuários enviar prompts e receber respostas geradas pela API da Gemini. 🚀‍🌐 Foi desenvolvido com o objetivo de conectar o fã da furia com a organazição e responder perguntas feitas sobre CounterStrike. 🧠‍💡
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- **Front-end:** React Js
+- **Gerenciamento de Estado:** Context API do React
+- **Estilização:** CSS puro com TailwindCSS
+- **Ícones:** Google Icons
+- **API Externa:** Gemini API para geração de respostas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Live
+
+//TODO
+
+## 🎈 Funcionalidades
+
+- Envio de prompts para a API da Gemini e exibição das respostas sobre a Furia E-Sports.
+- Loader animado durante o envio dos prompts.
+- Interface responsiva para diferentes dispositivos.
+
+## 🤝 Como rodar localmente
+
+- gerar sua chave API para acesso do google gemini
+- trocar a variavel local no arquivo .ENV para sua chave
+- rodar o comando npm run dev
+
+## ⚙ Considerações finais 
+
+- a landing page é meramente ilustrativa, o foco prinicipal é a funcionalidade do chatBot.
