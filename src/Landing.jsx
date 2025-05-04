@@ -1,7 +1,7 @@
 import "./Landing.css";
 import background from "./assets/furiaBackground2.webp";
 
-const Landing = () => {
+const landing = () => {
   return (
     <div className="landing-wrapper">
       <header className="navbar">
@@ -26,4 +26,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default landing;
