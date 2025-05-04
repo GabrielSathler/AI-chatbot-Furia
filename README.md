@@ -15,7 +15,7 @@ O Projeto Furia Chatbot é uma aplicação web que permite aos usuários enviar 
 
 ## Live
 
-//TODO
+https://ai-chatbot-furia-aifx.vercel.app/
 
 ## 🎈 Funcionalidades
 
